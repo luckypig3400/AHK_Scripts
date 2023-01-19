@@ -6,7 +6,7 @@ MsgBox 您可以參考以下使用說明: Alt+E開始執行
 
 ;讀取文字檔 https://www.autohotkey.com/boards/viewtopic.php?t=90919
 FileRead, FileContent, bookList.txt
-bookList := StrSplit(FileContent, ",")
+bookList := StrSplit(FileContent, "`r`n")
 
 i := 1
 ;在下方(數字3)更改本批要報廢的書籍數量
