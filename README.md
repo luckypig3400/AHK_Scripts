@@ -15,3 +15,7 @@ Target Program: 目標程式名稱
 重要:目標視窗要最大化
 */
 ```
+
+## References
+### AHK語法產生器
++ https://papple23g-ahkcompiler.herokuapp.com/ahktool
