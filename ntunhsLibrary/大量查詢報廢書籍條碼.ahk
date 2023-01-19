@@ -1,5 +1,13 @@
+/*
+OS: Windows10
+Screen Resolution: 1920*1080
+Scale and layout: 125%
+Target Program: SirsiDynix Symphony WorkFlows
+重要:目標視窗要最大化
+*/
+
 MsgBox 歡迎使用簡易自動化腳本來協助您完成大量查詢報廢書籍條碼的點擊步驟!
-MsgBox 您可以參考以下使用說明: Alt+E開始執行
+MsgBox 請您把要查詢的書本條碼整理成bookList.txt`n放在與此腳本相同的目錄之下`n接著您可以透過鍵盤組合建Alt+E開始執行
 
 ;按鍵Alt+E開始執行
 !E:: 

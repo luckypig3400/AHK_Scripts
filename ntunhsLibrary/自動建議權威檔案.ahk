@@ -1,3 +1,11 @@
+/*
+OS: Windows10
+Screen Resolution: 1920*1080
+Scale and layout: 125%
+Target Program: SirsiDynix Symphony WorkFlows
+重要:目標視窗要最大化
+*/
+
 MsgBox 歡迎使用簡易自動化腳本來協助您完成建議權威檔案的點擊步驟!
 MsgBox 您可以參考以下使用說明: Alt+E開始執行
 
