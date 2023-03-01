@@ -75,10 +75,18 @@ return ;代表該區段腳本結束
 
 ;按鍵Alt+G開始執行
 !G::
-  ;點讀者對象輸入框，讀者對象填入g
+  ;點讀者對象輸入框，讀者對象填入g(一般書籍)
   ClickPosition(1835, 416, 1, 0, "Screen", true)
   Sleep 100
   Send g
+return ;代表該區段腳本結束
+
+;按鍵Alt+F開始執行，讀者對象填入f(專業書籍)
+!F::
+  ;點讀者對象輸入框
+  ClickPosition(1835, 416, 1, 0, "Screen", true)
+  Sleep 100
+  Send f
 return ;代表該區段腳本結束
 
 ;模擬滑鼠點擊
