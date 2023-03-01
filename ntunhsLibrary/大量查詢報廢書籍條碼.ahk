@@ -12,116 +12,116 @@ MsgBox ½Ð±z§â­n¬d¸ßªº®Ñ¥»±ø½X¾ã²z¦¨bookList.txt`n©ñ¦b»P¦¹¸}¥»¬Û¦Pªº¥Ø¿ý¤§¤U`n±µµ
 ;«öÁäAlt+E¶}©l°õ¦æ
 !E:: 
 
-;Åª¨ú¤å¦rÀÉ https://www.autohotkey.com/boards/viewtopic.php?t=90919
-FileRead, FileContent, bookList.txt
-bookList := StrSplit(FileContent, "`r`n")
+  ;Åª¨ú¤å¦rÀÉ https://www.autohotkey.com/boards/viewtopic.php?t=90919
+  FileRead, FileContent, bookList.txt
+  bookList := StrSplit(FileContent, "`r`n")
 
-i := 1
-;¦b¤U¤è(¼Æ¦r3)§ó§ï¥»§å­n³ø¼oªº®ÑÄy¼Æ¶q
-Loop, 3
-{
-clipboard := bookList[i]
+  i := 1
+  ;¦b¤U¤è(¼Æ¦r3)§ó§ï¥»§å­n³ø¼oªº®ÑÄy¼Æ¶q
+  Loop, 3
+  {
+    clipboard := bookList[i]
 
-;¼g¤J°Å¶KÃ¯µ²ªG¨ìÀÉ®×
-;https://www.autohotkey.com/boards/viewtopic.php?t=52164
-FileAppend, "%clipboard%"`,, result.csv
+    ;¼g¤J°Å¶KÃ¯µ²ªG¨ìÀÉ®×
+    ;https://www.autohotkey.com/boards/viewtopic.php?t=52164
+    FileAppend, "%clipboard%"`,, result.csv
 
-;ÂI¿ï¬d¸ßÄæ¦ì
-ClickPosition(418, 205, 1, 0, "Screen", true)
-Sleep 300
+    ;ÂI¿ï¬d¸ßÄæ¦ì
+    ClickPosition(418, 205, 1, 0, "Screen", true)
+    Sleep 300
 
-;Áä½L¿é¤J·Æ¹«²Õ¦XÁä
-;https://www.autohotkey.com/boards/viewtopic.php?t=85456
-Send, ^a ; Ctrl + A
-Sleep 100
-Send, ^v ; Ctrl + V
-Sleep 100
-Send, {Enter}
-Sleep 600
+    ;Áä½L¿é¤J·Æ¹«²Õ¦XÁä
+    ;https://www.autohotkey.com/boards/viewtopic.php?t=85456
+    Send, ^a ; Ctrl + A
+    Sleep 100
+    Send, ^v ; Ctrl + V
+    Sleep 100
+    Send, {Enter}
+    Sleep 600
 
-;©ì¦²®Ñ¥»¼ÐÃD
-MouseClickDrag, left, 280, 208, 300, 235, 2
-Sleep 300
-Send, ^c ; Ctrl + C
+    ;©ì¦²®Ñ¥»¼ÐÃD
+    MouseClickDrag, left, 280, 208, 300, 235, 2
+    Sleep 300
+    Send, ^c ; Ctrl + C
 
-;MsgBox %clipboard%
+    ;MsgBox %clipboard%
 
-;¼g¤J°Å¶KÃ¯¨ìÀÉ®×(¼ÐÃD)
-;¦³¥[""¤ñ¸û¦w¥þ¡A¥i¥HÁ×§K¯S®í¼ÐÃD¤å¦r³y¦¨Äæ¦ì¶]±¼
-FileAppend, "%clipboard%"`,, result.csv
+    ;¼g¤J°Å¶KÃ¯¨ìÀÉ®×(¼ÐÃD)
+    ;¦³¥[""¤ñ¸û¦w¥þ¡A¥i¥HÁ×§K¯S®í¼ÐÃD¤å¦r³y¦¨Äæ¦ì¶]±¼
+    FileAppend, "%clipboard%"`,, result.csv
 
-;ÂI¯Á®Ñ¸¹/À]ÂÃ
-ClickPosition(603, 260, 1, 0, "Screen", true)
-Sleep 300
+    ;ÂI¯Á®Ñ¸¹/À]ÂÃ
+    ClickPosition(603, 260, 1, 0, "Screen", true)
+    Sleep 300
 
-;ÂI»ù®æÄæ¦ì
-ClickPosition(1450, 880, 1, 0, "Screen", true)
-Sleep 300
-Send, ^a ; Ctrl + A
-Sleep 100
-Send, ^c ; Ctrl + C
-Sleep 100
+    ;ÂI»ù®æÄæ¦ì
+    ClickPosition(1450, 880, 1, 0, "Screen", true)
+    Sleep 300
+    Send, ^a ; Ctrl + A
+    Sleep 100
+    Send, ^c ; Ctrl + C
+    Sleep 100
 
-;¼g¤J°Å¶KÃ¯¨ìÀÉ®×(»ù®æ)
-FileAppend, "%clipboard%"`,, result.csv
-Sleep 200
+    ;¼g¤J°Å¶KÃ¯¨ìÀÉ®×(»ù®æ)
+    FileAppend, "%clipboard%"`,, result.csv
+    Sleep 200
 
-;ÂI·s¼W¤é´Á
-ClickPosition(461, 573, 1, 0, "Screen", true)
-Sleep 100
-Send, ^a ; Ctrl + A
-Sleep 100
-Send, ^c ; Ctrl + C
-Sleep 100
+    ;ÂI·s¼W¤é´Á
+    ClickPosition(461, 573, 1, 0, "Screen", true)
+    Sleep 100
+    Send, ^a ; Ctrl + A
+    Sleep 100
+    Send, ^c ; Ctrl + C
+    Sleep 100
 
-;¼g¤J°Å¶KÃ¯¨ìÀÉ®×(·s¼W¤é´Á)
-FileAppend, "%clipboard%"`n, result.csv
+    ;¼g¤J°Å¶KÃ¯¨ìÀÉ®×(·s¼W¤é´Á)
+    FileAppend, "%clipboard%"`n, result.csv
 
-;ÂIªð¦^ÀË¯Á
-ClickPosition(900, 990, 1, 0, "Screen", true)
-Sleep 300
+    ;ÂIªð¦^ÀË¯Á
+    ClickPosition(900, 990, 1, 0, "Screen", true)
+    Sleep 300
 
-i += 1
-}
+    i += 1
+  }
 
-MsgBox ¸}¥»¶¶§Q°õ¦æ§¹¦¨!
+  MsgBox ¸}¥»¶¶§Q°õ¦æ§¹¦¨!
 
 return ;¥Nªí¸Ó°Ï¬q¸}¥»µ²§ô
 
 ;«öÁäAlt+G¶}©l°õ¦æ
 !G::
-;ÂIÅªªÌ¹ï¶H¿é¤J®Ø¡AÅªªÌ¹ï¶H¶ñ¤Jg
-ClickPosition(1835, 416, 1, 0, "Screen", true)
-Sleep 100
-Send g
+  ;ÂIÅªªÌ¹ï¶H¿é¤J®Ø¡AÅªªÌ¹ï¶H¶ñ¤Jg
+  ClickPosition(1835, 416, 1, 0, "Screen", true)
+  Sleep 100
+  Send g
 return ;¥Nªí¸Ó°Ï¬q¸}¥»µ²§ô
 
 ;¼ÒÀÀ·Æ¹«ÂIÀ»
 ClickPosition(posX,posY,ClickCount:=1,Speed:=0,CoordMode:="Screen",Return:=true){
-    ;­Y¨Ï¥Î¬Û¹ï¼Ò¦¡
-    if (CoordMode="Relative"){
-        CoordMode,Mouse,Screen
-        MouseGetPos, posX_i, posY_i ;Àx¦s­ì¨Óªº·Æ¹«¦ì¸m
-        ;®Ú¾ÚÂIÀ»¦¸¼Æ¬O§_¬°¹s¨Ó¨Ï¥ÎMouseClick©ÎMouseMove
-        if %ClickCount%{
-            MouseClick,,%posX%,%posY%,%ClickCount%,%Speed%,,R ;ÂIÀ»¬Û¹ï¦ì¸m
-        }else{
-            MouseMove, %posX%, %posY%,%Speed%
-        }
-    ;­Y¨Ï¥Î¨ä¥L¼Ò¦¡
+  ;­Y¨Ï¥Î¬Û¹ï¼Ò¦¡
+  if (CoordMode="Relative"){
+    CoordMode,Mouse,Screen
+    MouseGetPos, posX_i, posY_i ;Àx¦s­ì¨Óªº·Æ¹«¦ì¸m
+    ;®Ú¾ÚÂIÀ»¦¸¼Æ¬O§_¬°¹s¨Ó¨Ï¥ÎMouseClick©ÎMouseMove
+    if %ClickCount%{
+      MouseClick,,%posX%,%posY%,%ClickCount%,%Speed%,,R ;ÂIÀ»¬Û¹ï¦ì¸m
     }else{
-        CoordMode,Mouse,%CoordMode%
-        MouseGetPos, posX_i, posY_i ;Àx¦s­ì¨Óªº·Æ¹«¦ì¸m
-        ;®Ú¾ÚÂIÀ»¦¸¼Æ¬O§_¬°¹s¨Ó¨Ï¥ÎMouseClick©ÎMouseMove
-        if %ClickCount%{
-            MouseClick,,%posX%,%posY%,%ClickCount%,%Speed%
-        }else{
-            MouseMove, %posX%, %posY%,%Speed%
-        }
+      MouseMove, %posX%, %posY%,%Speed%
     }
-    ;¬O§_ÂIÀ»«áªð¦^
-    if %Return%{
-        MouseMove, %posX_i%, %posY_i%,%Speed%
+    ;­Y¨Ï¥Î¨ä¥L¼Ò¦¡
+  }else{
+    CoordMode,Mouse,%CoordMode%
+    MouseGetPos, posX_i, posY_i ;Àx¦s­ì¨Óªº·Æ¹«¦ì¸m
+    ;®Ú¾ÚÂIÀ»¦¸¼Æ¬O§_¬°¹s¨Ó¨Ï¥ÎMouseClick©ÎMouseMove
+    if %ClickCount%{
+      MouseClick,,%posX%,%posY%,%ClickCount%,%Speed%
+    }else{
+      MouseMove, %posX%, %posY%,%Speed%
     }
-    return
+  }
+  ;¬O§_ÂIÀ»«áªð¦^
+if %Return%{
+  MouseMove, %posX_i%, %posY_i%,%Speed%
+}
+return
 }
