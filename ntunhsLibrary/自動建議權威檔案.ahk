@@ -3,97 +3,97 @@ OS: Windows10
 Screen Resolution: 1920*1080
 Scale and layout: 125%
 Target Program: SirsiDynix Symphony WorkFlows
-ï¿½ï¿½ï¿½n:ï¿½Ø¼Ðµï¿½ï¿½ï¿½ï¿½nï¿½Ì¤jï¿½ï¿½
+­«­n:¥Ø¼Ðµøµ¡­n³Ì¤j¤Æ
 */
 
-MsgBox ï¿½wï¿½ï¿½Ï¥ï¿½Â²ï¿½ï¿½ï¿½Û°Ê¤Æ¸}ï¿½ï¿½ï¿½Ó¨ï¿½Uï¿½zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½vï¿½ï¿½ï¿½É®×ªï¿½ï¿½Iï¿½ï¿½ï¿½Bï¿½J!
-MsgBox ï¿½zï¿½iï¿½Hï¿½Ñ¦Ò¥Hï¿½Uï¿½Ï¥Î»ï¿½ï¿½ï¿½: Alt+Eï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½
+MsgBox Åwªï¨Ï¥ÎÂ²©ö¦Û°Ê¤Æ¸}¥»¨Ó¨ó§U±z§¹¦¨«ØÄ³Åv«ÂÀÉ®×ªºÂIÀ»¨BÆJ!
+MsgBox ±z¥i¥H°Ñ¦Ò¥H¤U¨Ï¥Î»¡©ú: Alt+E¶}©l°õ¦æ
 
-;ï¿½ï¿½ï¿½ï¿½Alt+Eï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½
+;«öÁäAlt+E¶}©l°õ¦æ
 !E:: 
 
-  ;ï¿½Iï¿½Ë¬dï¿½vï¿½Âªï¿½ï¿½ï¿½ï¿½Ä¤ï¿½
-  ClickPosition(290, 172, 1, 0, "Screen", true)
-  Sleep 600
+;ÂIÀË¬dÅv«Âªººñ¦â¤Ä¤Ä
+ClickPosition(290, 172, 1, 0, "Screen", true)
+Sleep 600
 
-  Loop, 3
-  {
-    ;ï¿½Iï¿½ï¿½Ä³
-    ClickPosition(1842, 429, 1, 0, "Screen", true)
-    Sleep 600
+Loop, 3
+{
+;ÂI«ØÄ³
+ClickPosition(1842, 429, 1, 0, "Screen", true)
+Sleep 600
 
-    ;ï¿½IOK
-    ClickPosition(1054, 1001, 1, 0, "Screen", true)
-    Sleep 300
+;ÂIOK
+ClickPosition(1054, 1001, 1, 0, "Screen", true)
+Sleep 300
 
-    ;ï¿½Iï¿½Uï¿½@ï¿½ï¿½
-    ClickPosition(1842, 211, 1, 0, "Screen", true)
-    Sleep 300
-  }
-
-  ;ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½çªºOK(ï¿½ï¿½ï¿½sï¿½Wï¿½vï¿½Â¸ï¿½ï¿½Xï¿½ï¿½ï¿½jï¿½ï¿½)
-  ClickPosition(1082, 669, 1, 0, "Screen", true)
-  Sleep 300
-
-  ;ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½çªºOK(ï¿½pï¿½ï¿½)
-  ClickPosition(1082, 636, 1, 0, "Screen", true)
-  Sleep 300
-
-  ;ï¿½Iï¿½ï¿½ï¿½Ñ¸ï¿½/ï¿½]ï¿½ï¿½
-  ClickPosition(550, 260, 1, 0, "Screen", true)
-  Sleep 100
-
-  ;ï¿½Iï¿½sï¿½x
-  ClickPosition(990, 990, 1, 0, "Screen", true)
-  Sleep 100
-
-  ;ï¿½Æ¹ï¿½ï¿½ï¿½ï¿½Üªï¿½^ï¿½Ë¯ï¿½
-  MouseMove, 900, 990
-
-return ;ï¿½Nï¿½ï¿½ï¿½Ó°Ï¬qï¿½}ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-
-;ï¿½ï¿½ï¿½ï¿½Alt+Gï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½
-!G::
-  ;ï¿½IÅªï¿½Ì¹ï¿½Hï¿½ï¿½Jï¿½Ø¡AÅªï¿½Ì¹ï¿½Hï¿½ï¿½Jg
-  ClickPosition(1835, 416, 1, 0, "Screen", true)
-  Sleep 100
-  Send g
-return ;ï¿½Nï¿½ï¿½ï¿½Ó°Ï¬qï¿½}ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-
-;ï¿½ï¿½ï¿½ï¿½Alt+Fï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½AÅªï¿½Ì¹ï¿½Hï¿½ï¿½Jf
-!F::
-  ;ï¿½IÅªï¿½Ì¹ï¿½Hï¿½ï¿½Jï¿½ï¿½
-  ClickPosition(1835, 416, 1, 0, "Screen", true)
-  Sleep 100
-  Send f
-return ;ï¿½Nï¿½ï¿½ï¿½Ó°Ï¬qï¿½}ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-
-;ï¿½ï¿½ï¿½ï¿½ï¿½Æ¹ï¿½ï¿½Iï¿½ï¿½
-ClickPosition(posX,posY,ClickCount:=1,Speed:=0,CoordMode:="Screen",Return:=true){
-  ;ï¿½Yï¿½Ï¥Î¬Û¹ï¿½Ò¦ï¿½
-  if (CoordMode="Relative"){
-    CoordMode,Mouse,Screen
-    MouseGetPos, posX_i, posY_i ;ï¿½xï¿½sï¿½ï¿½Óªï¿½ï¿½Æ¹ï¿½ï¿½ï¿½m
-    ;ï¿½Ú¾ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½Æ¬Oï¿½_ï¿½ï¿½ï¿½sï¿½Ó¨Ï¥ï¿½MouseClickï¿½ï¿½MouseMove
-    if %ClickCount%{
-      MouseClick,,%posX%,%posY%,%ClickCount%,%Speed%,,R ;ï¿½Iï¿½ï¿½ï¿½Û¹ï¿½ï¿½m
-    }else{
-      MouseMove, %posX%, %posY%,%Speed%
-    }
-    ;ï¿½Yï¿½Ï¥Î¨ï¿½Lï¿½Ò¦ï¿½
-  }else{
-    CoordMode,Mouse,%CoordMode%
-    MouseGetPos, posX_i, posY_i ;ï¿½xï¿½sï¿½ï¿½Óªï¿½ï¿½Æ¹ï¿½ï¿½ï¿½m
-    ;ï¿½Ú¾ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½Æ¬Oï¿½_ï¿½ï¿½ï¿½sï¿½Ó¨Ï¥ï¿½MouseClickï¿½ï¿½MouseMove
-    if %ClickCount%{
-      MouseClick,,%posX%,%posY%,%ClickCount%,%Speed%
-    }else{
-      MouseMove, %posX%, %posY%,%Speed%
-    }
-  }
-  ;ï¿½Oï¿½_ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½^
-if %Return%{
-  MouseMove, %posX_i%, %posY_i%,%Speed%
+;ÂI¤U¤@­¶
+ClickPosition(1842, 211, 1, 0, "Screen", true)
+Sleep 300
 }
-return
+
+;ÂI§¹¦¨ÀËÅçªºOK(¦³·s¼WÅv«Â¸õ¥Xªº¤j®Ø)
+ClickPosition(1082, 669, 1, 0, "Screen", true)
+Sleep 300
+
+;ÂI§¹¦¨ÀËÅçªºOK(¤p®Ø)
+ClickPosition(1082, 636, 1, 0, "Screen", true)
+Sleep 300
+
+;ÂI¯Á®Ñ¸¹/À]ÂÃ
+ClickPosition(550, 260, 1, 0, "Screen", true)
+Sleep 100
+
+;ÂI¦sÀx
+ClickPosition(990, 990, 1, 0, "Screen", true)
+Sleep 100
+
+;·Æ¹«²¾¦Üªð¦^ÀË¯Á
+MouseMove, 900, 990
+
+return ;¥Nªí¸Ó°Ï¬q¸}¥»µ²§ô
+
+;«öÁäAlt+G¶}©l°õ¦æ
+!G::
+;ÂIÅªªÌ¹ï¶H¿é¤J®Ø¡AÅªªÌ¹ï¶H¶ñ¤Jg
+ClickPosition(1835, 416, 1, 0, "Screen", true)
+Sleep 100
+Send g
+return ;¥Nªí¸Ó°Ï¬q¸}¥»µ²§ô
+
+;«öÁäAlt+F¶}©l°õ¦æ¡AÅªªÌ¹ï¶H¶ñ¤Jf
+!F::
+;ÂIÅªªÌ¹ï¶H¿é¤J®Ø
+ClickPosition(1835, 416, 1, 0, "Screen", true)
+Sleep 100
+Send f
+return ;¥Nªí¸Ó°Ï¬q¸}¥»µ²§ô
+
+;¼ÒÀÀ·Æ¹«ÂIÀ»
+ClickPosition(posX,posY,ClickCount:=1,Speed:=0,CoordMode:="Screen",Return:=true){
+    ;­Y¨Ï¥Î¬Û¹ï¼Ò¦¡
+    if (CoordMode="Relative"){
+        CoordMode,Mouse,Screen
+        MouseGetPos, posX_i, posY_i ;Àx¦s­ì¨Óªº·Æ¹«¦ì¸m
+        ;®Ú¾ÚÂIÀ»¦¸¼Æ¬O§_¬°¹s¨Ó¨Ï¥ÎMouseClick©ÎMouseMove
+        if %ClickCount%{
+            MouseClick,,%posX%,%posY%,%ClickCount%,%Speed%,,R ;ÂIÀ»¬Û¹ï¦ì¸m
+        }else{
+            MouseMove, %posX%, %posY%,%Speed%
+        }
+    ;­Y¨Ï¥Î¨ä¥L¼Ò¦¡
+    }else{
+        CoordMode,Mouse,%CoordMode%
+        MouseGetPos, posX_i, posY_i ;Àx¦s­ì¨Óªº·Æ¹«¦ì¸m
+        ;®Ú¾ÚÂIÀ»¦¸¼Æ¬O§_¬°¹s¨Ó¨Ï¥ÎMouseClick©ÎMouseMove
+        if %ClickCount%{
+            MouseClick,,%posX%,%posY%,%ClickCount%,%Speed%
+        }else{
+            MouseMove, %posX%, %posY%,%Speed%
+        }
+    }
+    ;¬O§_ÂIÀ»«áªð¦^
+    if %Return%{
+        MouseMove, %posX_i%, %posY_i%,%Speed%
+    }
+    return
 }
