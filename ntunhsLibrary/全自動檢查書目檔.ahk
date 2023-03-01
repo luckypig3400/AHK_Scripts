@@ -44,7 +44,7 @@ MsgBox 請您把要查詢的書本條碼整理成bookList.txt`n放在此腳本的 bibliographicFiles
     FileAppend, "%clipboard%"`,, result.csv
 
     ;start of 自動建議權威區塊
-
+    ;等自動建議權威順利改為使用圖片識別後，再放入此區塊
     ;end of 自動建議權威區塊
 
     ;點索書號/館藏
