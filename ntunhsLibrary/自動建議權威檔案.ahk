@@ -11,6 +11,14 @@ MsgBox 您可以參考以下使用說明: Alt+E開始執行
 
 ;按鍵Alt+E開始執行
 !E:: 
+  ;YesNo對話框 https://www.autohotkey.com/docs/v1/lib/MsgBox.htm
+  MsgBox, 4,, 此書是否為專業書籍?`n(點選是會自動填入f，反之歸為一般書籍g)
+  ;IfMsgBox執行多行指令 https://www.autohotkey.com/boards/viewtopic.php?t=74473
+  IfMsgBox Yes
+  classifyBookASprofessional()
+  else
+    classifyBookASgeneral()
+  Sleep, 100
 
   ;點檢查權威的綠色勾勾
   ClickPosition(290, 172, 1, 0, "Screen", true)
@@ -54,19 +62,27 @@ return ;代表該區段腳本結束
 
 ;按鍵Alt+G開始執行
 !G::
+  classifyBookASgeneral()
+return ;代表該區段腳本結束
+
+classifyBookASgeneral(){
   ;點讀者對象輸入框，讀者對象填入g(一般書籍)
   ClickPosition(1835, 416, 1, 0, "Screen", true)
   Sleep 100
   Send g
-return ;代表該區段腳本結束
+}
 
 ;按鍵Alt+F開始執行，讀者對象填入f(專業書籍)
 !F::
+  classifyBookASprofessional()
+return ;代表該區段腳本結束
+
+classifyBookASprofessional(){
   ;點讀者對象輸入框
   ClickPosition(1835, 416, 1, 0, "Screen", true)
   Sleep 100
   Send f
-return ;代表該區段腳本結束
+}
 
 ;模擬滑鼠點擊
 ClickPosition(posX,posY,ClickCount:=1,Speed:=0,CoordMode:="Screen",Return:=true){
