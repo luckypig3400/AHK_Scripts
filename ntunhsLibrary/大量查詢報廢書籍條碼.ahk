@@ -3,125 +3,125 @@ OS: Windows10
 Screen Resolution: 1920*1080
 Scale and layout: 125%
 Target Program: SirsiDynix Symphony WorkFlows
-­«­n:¥Ø¼Ðµøµ¡­n³Ì¤j¤Æ
+ï¿½ï¿½ï¿½n:ï¿½Ø¼Ðµï¿½ï¿½ï¿½ï¿½nï¿½Ì¤jï¿½ï¿½
 */
 
-MsgBox Åwªï¨Ï¥ÎÂ²©ö¦Û°Ê¤Æ¸}¥»¨Ó¨ó§U±z§¹¦¨¤j¶q¬d¸ß³ø¼o®ÑÄy±ø½XªºÂIÀ»¨BÆJ!
-MsgBox ½Ð±z§â­n¬d¸ßªº®Ñ¥»±ø½X¾ã²z¦¨bookList.txt`n©ñ¦b»P¦¹¸}¥»¬Û¦Pªº¥Ø¿ý¤§¤U`n±µµÛ±z¥i¥H³z¹LÁä½L²Õ¦X«ØAlt+E¶}©l°õ¦æ
+MsgBox ï¿½wï¿½ï¿½Ï¥ï¿½Â²ï¿½ï¿½ï¿½Û°Ê¤Æ¸}ï¿½ï¿½ï¿½Ó¨ï¿½Uï¿½zï¿½ï¿½ï¿½ï¿½ï¿½jï¿½qï¿½dï¿½ß³ï¿½ï¿½oï¿½ï¿½ï¿½yï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½Bï¿½J!
+MsgBox ï¿½Ð±zï¿½ï¿½nï¿½dï¿½ßªï¿½ï¿½Ñ¥ï¿½ï¿½ï¿½ï¿½Xï¿½ï¿½zï¿½ï¿½bookList.txt`nï¿½ï¿½bï¿½Pï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½Û¦Pï¿½ï¿½ï¿½Ø¿ï¿½ï¿½ï¿½ï¿½U`nï¿½ï¿½ï¿½Û±zï¿½iï¿½Hï¿½zï¿½Lï¿½ï¿½Lï¿½Õ¦Xï¿½ï¿½Alt+Eï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½
 
-;«öÁäAlt+E¶}©l°õ¦æ
+;ï¿½ï¿½ï¿½ï¿½Alt+Eï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½
 !E:: 
 
-;Åª¨ú¤å¦rÀÉ https://www.autohotkey.com/boards/viewtopic.php?t=90919
-FileRead, FileContent, bookList.txt
-bookList := StrSplit(FileContent, "`r`n")
+  ;Åªï¿½ï¿½ï¿½ï¿½rï¿½ï¿½ https://www.autohotkey.com/boards/viewtopic.php?t=90919
+  FileRead, FileContent, bookList.txt
+  bookList := StrSplit(FileContent, "`r`n")
 
-i := 1
-;¦b¤U¤è(¼Æ¦r3)§ó§ï¥»§å­n³ø¼oªº®ÑÄy¼Æ¶q
-Loop, 3
-{
-clipboard := bookList[i]
+  i := 1
+  ;ï¿½bï¿½Uï¿½ï¿½(ï¿½Æ¦r3)ï¿½ï¿½ï¥»ï¿½ï¿½nï¿½ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½ï¿½yï¿½Æ¶q
+  Loop, 3
+  {
+    clipboard := bookList[i]
 
-;¼g¤J°Å¶KÃ¯µ²ªG¨ìÀÉ®×
-;https://www.autohotkey.com/boards/viewtopic.php?t=52164
-FileAppend, "%clipboard%"`,, result.csv
+    ;ï¿½gï¿½Jï¿½Å¶KÃ¯ï¿½ï¿½ï¿½Gï¿½ï¿½ï¿½É®ï¿½
+    ;https://www.autohotkey.com/boards/viewtopic.php?t=52164
+    FileAppend, "%clipboard%"`,, result.csv
 
-;ÂI¿ï¬d¸ßÄæ¦ì
-ClickPosition(418, 205, 1, 0, "Screen", true)
-Sleep 300
+    ;ï¿½Iï¿½ï¿½dï¿½ï¿½ï¿½ï¿½ï¿½
+    ClickPosition(418, 205, 1, 0, "Screen", true)
+    Sleep 300
 
-;Áä½L¿é¤J·Æ¹«²Õ¦XÁä
-;https://www.autohotkey.com/boards/viewtopic.php?t=85456
-Send, ^a ; Ctrl + A
-Sleep 100
-Send, ^v ; Ctrl + V
-Sleep 100
-Send, {Enter}
-Sleep 600
+    ;ï¿½ï¿½Lï¿½ï¿½Jï¿½Æ¹ï¿½ï¿½Õ¦Xï¿½ï¿½
+    ;https://www.autohotkey.com/boards/viewtopic.php?t=85456
+    Send, ^a ; Ctrl + A
+    Sleep 100
+    Send, ^v ; Ctrl + V
+    Sleep 100
+    Send, {Enter}
+    Sleep 600
 
-;©ì¦²®Ñ¥»¼ÐÃD
-MouseClickDrag, left, 280, 208, 300, 235, 2
-Sleep 300
-Send, ^c ; Ctrl + C
+    ;ï¿½ì¦²ï¿½Ñ¥ï¿½ï¿½ï¿½ï¿½D
+    MouseClickDrag, left, 280, 208, 300, 235, 2
+    Sleep 300
+    Send, ^c ; Ctrl + C
 
-;MsgBox %clipboard%
+    ;MsgBox %clipboard%
 
-;¼g¤J°Å¶KÃ¯¨ìÀÉ®×(¼ÐÃD)
-;¦³¥[""¤ñ¸û¦w¥þ¡A¥i¥HÁ×§K¯S®í¼ÐÃD¤å¦r³y¦¨Äæ¦ì¶]±¼
-FileAppend, "%clipboard%"`,, result.csv
+    ;ï¿½gï¿½Jï¿½Å¶KÃ¯ï¿½ï¿½ï¿½É®ï¿½(ï¿½ï¿½ï¿½D)
+    ;ï¿½ï¿½ï¿½[""ï¿½ï¿½ï¿½ï¿½wï¿½ï¿½ï¿½Aï¿½iï¿½Hï¿½×§Kï¿½Sï¿½ï¿½ï¿½ï¿½ï¿½Dï¿½ï¿½rï¿½yï¿½ï¿½ï¿½ï¿½ï¿½]ï¿½ï¿½
+    FileAppend, "%clipboard%"`,, result.csv
 
-;ÂI¯Á®Ñ¸¹/À]ÂÃ
-ClickPosition(603, 260, 1, 0, "Screen", true)
-Sleep 300
+    ;ï¿½Iï¿½ï¿½ï¿½Ñ¸ï¿½/ï¿½]ï¿½ï¿½
+    ClickPosition(603, 260, 1, 0, "Screen", true)
+    Sleep 300
 
-;ÂI»ù®æÄæ¦ì
-ClickPosition(1450, 880, 1, 0, "Screen", true)
-Sleep 300
-Send, ^a ; Ctrl + A
-Sleep 100
-Send, ^c ; Ctrl + C
-Sleep 100
+    ;ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    ClickPosition(1450, 880, 1, 0, "Screen", true)
+    Sleep 300
+    Send, ^a ; Ctrl + A
+    Sleep 100
+    Send, ^c ; Ctrl + C
+    Sleep 100
 
-;¼g¤J°Å¶KÃ¯¨ìÀÉ®×(»ù®æ)
-FileAppend, "%clipboard%"`,, result.csv
-Sleep 200
+    ;ï¿½gï¿½Jï¿½Å¶KÃ¯ï¿½ï¿½ï¿½É®ï¿½(ï¿½ï¿½ï¿½ï¿½)
+    FileAppend, "%clipboard%"`,, result.csv
+    Sleep 200
 
-;ÂI·s¼W¤é´Á
-ClickPosition(461, 573, 1, 0, "Screen", true)
-Sleep 100
-Send, ^a ; Ctrl + A
-Sleep 100
-Send, ^c ; Ctrl + C
-Sleep 100
+    ;ï¿½Iï¿½sï¿½Wï¿½ï¿½ï¿½
+    ClickPosition(461, 573, 1, 0, "Screen", true)
+    Sleep 100
+    Send, ^a ; Ctrl + A
+    Sleep 100
+    Send, ^c ; Ctrl + C
+    Sleep 100
 
-;¼g¤J°Å¶KÃ¯¨ìÀÉ®×(·s¼W¤é´Á)
-FileAppend, "%clipboard%"`n, result.csv
+    ;ï¿½gï¿½Jï¿½Å¶KÃ¯ï¿½ï¿½ï¿½É®ï¿½(ï¿½sï¿½Wï¿½ï¿½ï¿½)
+    FileAppend, "%clipboard%"`n, result.csv
 
-;ÂIªð¦^ÀË¯Á
-ClickPosition(900, 990, 1, 0, "Screen", true)
-Sleep 300
+    ;ï¿½Iï¿½ï¿½^ï¿½Ë¯ï¿½
+    ClickPosition(900, 990, 1, 0, "Screen", true)
+    Sleep 300
 
-i += 1
-}
+    i += 1
+  }
 
-MsgBox ¸}¥»¶¶§Q°õ¦æ§¹¦¨!
+MsgBox ï¿½}ï¿½ï¿½ï¿½ï¿½ï¿½Qï¿½ï¿½ï¿½æ§¹ï¿½ï¿½!
 
-return ;¥Nªí¸Ó°Ï¬q¸}¥»µ²§ô
+return ;ï¿½Nï¿½ï¿½ï¿½Ó°Ï¬qï¿½}ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-;«öÁäAlt+G¶}©l°õ¦æ
+;ï¿½ï¿½ï¿½ï¿½Alt+Gï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½
 !G::
-;ÂIÅªªÌ¹ï¶H¿é¤J®Ø¡AÅªªÌ¹ï¶H¶ñ¤Jg
-ClickPosition(1835, 416, 1, 0, "Screen", true)
-Sleep 100
-Send g
-return ;¥Nªí¸Ó°Ï¬q¸}¥»µ²§ô
+  ;ï¿½IÅªï¿½Ì¹ï¿½Hï¿½ï¿½Jï¿½Ø¡AÅªï¿½Ì¹ï¿½Hï¿½ï¿½Jg
+  ClickPosition(1835, 416, 1, 0, "Screen", true)
+  Sleep 100
+  Send g
+return ;ï¿½Nï¿½ï¿½ï¿½Ó°Ï¬qï¿½}ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-;¼ÒÀÀ·Æ¹«ÂIÀ»
+;ï¿½ï¿½ï¿½ï¿½ï¿½Æ¹ï¿½ï¿½Iï¿½ï¿½
 ClickPosition(posX,posY,ClickCount:=1,Speed:=0,CoordMode:="Screen",Return:=true){
-    ;­Y¨Ï¥Î¬Û¹ï¼Ò¦¡
-    if (CoordMode="Relative"){
-        CoordMode,Mouse,Screen
-        MouseGetPos, posX_i, posY_i ;Àx¦s­ì¨Óªº·Æ¹«¦ì¸m
-        ;®Ú¾ÚÂIÀ»¦¸¼Æ¬O§_¬°¹s¨Ó¨Ï¥ÎMouseClick©ÎMouseMove
-        if %ClickCount%{
-            MouseClick,,%posX%,%posY%,%ClickCount%,%Speed%,,R ;ÂIÀ»¬Û¹ï¦ì¸m
-        }else{
-            MouseMove, %posX%, %posY%,%Speed%
-        }
-    ;­Y¨Ï¥Î¨ä¥L¼Ò¦¡
+  ;ï¿½Yï¿½Ï¥Î¬Û¹ï¿½Ò¦ï¿½
+  if (CoordMode="Relative"){
+    CoordMode,Mouse,Screen
+    MouseGetPos, posX_i, posY_i ;ï¿½xï¿½sï¿½ï¿½Óªï¿½ï¿½Æ¹ï¿½ï¿½ï¿½m
+    ;ï¿½Ú¾ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½Æ¬Oï¿½_ï¿½ï¿½ï¿½sï¿½Ó¨Ï¥ï¿½MouseClickï¿½ï¿½MouseMove
+    if %ClickCount%{
+      MouseClick,,%posX%,%posY%,%ClickCount%,%Speed%,,R ;ï¿½Iï¿½ï¿½ï¿½Û¹ï¿½ï¿½m
     }else{
-        CoordMode,Mouse,%CoordMode%
-        MouseGetPos, posX_i, posY_i ;Àx¦s­ì¨Óªº·Æ¹«¦ì¸m
-        ;®Ú¾ÚÂIÀ»¦¸¼Æ¬O§_¬°¹s¨Ó¨Ï¥ÎMouseClick©ÎMouseMove
-        if %ClickCount%{
-            MouseClick,,%posX%,%posY%,%ClickCount%,%Speed%
-        }else{
-            MouseMove, %posX%, %posY%,%Speed%
-        }
+      MouseMove, %posX%, %posY%,%Speed%
     }
-    ;¬O§_ÂIÀ»«áªð¦^
-    if %Return%{
-        MouseMove, %posX_i%, %posY_i%,%Speed%
+    ;ï¿½Yï¿½Ï¥Î¨ï¿½Lï¿½Ò¦ï¿½
+  }else{
+    CoordMode,Mouse,%CoordMode%
+    MouseGetPos, posX_i, posY_i ;ï¿½xï¿½sï¿½ï¿½Óªï¿½ï¿½Æ¹ï¿½ï¿½ï¿½m
+    ;ï¿½Ú¾ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½Æ¬Oï¿½_ï¿½ï¿½ï¿½sï¿½Ó¨Ï¥ï¿½MouseClickï¿½ï¿½MouseMove
+    if %ClickCount%{
+      MouseClick,,%posX%,%posY%,%ClickCount%,%Speed%
+    }else{
+      MouseMove, %posX%, %posY%,%Speed%
     }
-    return
+  }
+  ;ï¿½Oï¿½_ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½^
+if %Return%{
+  MouseMove, %posX_i%, %posY_i%,%Speed%
+}
+return
 }
