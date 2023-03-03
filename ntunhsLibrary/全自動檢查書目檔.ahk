@@ -18,13 +18,9 @@ MsgBox 請您把要查詢的書本條碼整理成bookList.txt`n放在此腳本的 bibliographicFiles
 
   i := 1
   ;在下方(數字3)更改本批要檢查書目檔的書籍數量
-  Loop, 3
+  Loop, 6
   {
     clipboard := bookList[i]
-
-    ;寫入剪貼簿結果到檔案
-    ;https://www.autohotkey.com/boards/viewtopic.php?t=52164
-    FileAppend, "%clipboard%"`,, bibliographicFiles/result.csv
 
     ;點選查詢欄位
     ClickPosition(418, 205, 1, 0, "Screen", true)
@@ -40,6 +36,7 @@ MsgBox 請您把要查詢的書本條碼整理成bookList.txt`n放在此腳本的 bibliographicFiles
     Sleep 600
 
     ;寫入剪貼簿到檔案(ISBN)
+    ;https://www.autohotkey.com/boards/viewtopic.php?t=52164
     ;有加""比較安全，可以避免特殊文字造成欄位跑掉
     FileAppend, "%clipboard%"`,, bibliographicFiles/result.csv
 
