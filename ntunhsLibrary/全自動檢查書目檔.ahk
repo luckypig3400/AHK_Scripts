@@ -6,8 +6,8 @@ Target Program: SirsiDynix Symphony WorkFlows
 重要:目標視窗要最大化
 */
 
-MsgBox 歡迎使用簡易自動化腳本來協助您完成整批書目檔的查詢、建議權威的點擊與編輯步驟!
-MsgBox 請您把要查詢的書本條碼整理成bookList.txt`n放在此腳本的 bibliographicFiles 目錄之下`n接著您可以透過鍵盤組合建Alt+E開始執行
+MsgBox 歡迎使用簡易自動化腳本來協助您完成整批`n書目檔的查詢、建議權威的點擊與編輯步驟!
+MsgBox 請您把要查詢的書本條碼整理成bookList.txt`n放在此腳本的 bibliographicFiles 目錄之下`n`n接著您可以透過鍵盤組合建Alt+E開始執行
 
 ;按鍵Alt+E開始執行
 !E:: 
@@ -16,9 +16,16 @@ MsgBox 請您把要查詢的書本條碼整理成bookList.txt`n放在此腳本的 bibliographicFiles
   FileRead, FileContent, bibliographicFiles/bookList.txt
   bookList := StrSplit(FileContent, "`r`n")
 
-  i := 1
   ;在下方(數字3)更改本批要檢查書目檔的書籍數量
-  Loop, 6
+  ;bookCount := 3
+
+  ;或是使用預設值(自動抓取清單中的書本數量)
+  ; https://www.autohotkey.com/boards/viewtopic.php?t=31061
+  bookCount := bookList.MaxIndex()
+  MsgBox,, 書本清單數量, 本次清單共%bookCount%本書`n`n按下確定開始執行
+
+  i := 1 ;變數i用來記錄目前做到第幾本書
+  Loop, %bookCount%
   {
     clipboard := bookList[i]
 
