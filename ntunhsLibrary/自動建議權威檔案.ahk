@@ -24,7 +24,7 @@ MsgBox 您可以參考以下使用說明: Alt+E開始執行
   ClickPosition(290, 172, 1, 0, "Screen", true)
   Sleep 600
 
-  Loop, 3
+  While(!ClickPicture("images/finishedCheck.png", 1, 0,true,false))
   {
     ;點建議
     ClickPosition(1842, 429, 1, 0, "Screen", true)
@@ -82,6 +82,36 @@ classifyBookASprofessional(){
   ClickPosition(1835, 416, 1, 0, "Screen", true)
   Sleep 100
   Send f
+}
+
+;獲取圖片的位置
+GetPicturePosition(ImageFilePath){
+  gui,add,picture,hwndmypic,%ImageFilePath%
+  controlgetpos,,,width,height,,ahk_id %mypic%
+  CoordMode Pixel
+  ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight,%ImageFilePath%
+  CoordMode Mouse
+  if %FoundX%{
+    return [FoundX+width/2,FoundY+height/2]
+  } else {
+    return FoundX
+  }
+}
+
+;模擬滑鼠點擊圖片
+ClickPicture(ImageFilePath,ClickCount:=1,Speed:=0,Return:=true,ShowError:=true){
+  pos:=GetPicturePosition(ImageFilePath)
+  if %pos%{
+    posX:=pos[1]
+    posY:=pos[2]
+    ClickPosition(posX,posY,ClickCount,Speed,,Return)
+    return [posX,posY]
+  }else{
+    if %ShowError% {
+      MSGBOX 畫面中找不到圖片`n %ImageFilePath%
+    }
+    return false
+  }
 }
 
 ;模擬滑鼠點擊
