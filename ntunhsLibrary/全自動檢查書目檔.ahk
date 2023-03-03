@@ -24,7 +24,7 @@ MsgBox 請您把要查詢的書本條碼整理成bookList.txt`n放在此腳本的 bibliographicFiles
 
     ;寫入剪貼簿結果到檔案
     ;https://www.autohotkey.com/boards/viewtopic.php?t=52164
-    FileAppend, "%clipboard%"`,, result.csv
+    FileAppend, "%clipboard%"`,, bibliographicFiles/result.csv
 
     ;點選查詢欄位
     ClickPosition(418, 205, 1, 0, "Screen", true)
@@ -41,10 +41,10 @@ MsgBox 請您把要查詢的書本條碼整理成bookList.txt`n放在此腳本的 bibliographicFiles
 
     ;寫入剪貼簿到檔案(ISBN)
     ;有加""比較安全，可以避免特殊文字造成欄位跑掉
-    FileAppend, "%clipboard%"`,, result.csv
+    FileAppend, "%clipboard%"`,, bibliographicFiles/result.csv
 
     ;start of 自動建議權威區塊
-    ;等自動建議權威順利改為使用圖片識別後，再放入此區塊
+    autoSuggetAuthFile()
     ;end of 自動建議權威區塊
 
     ;點索書號/館藏
@@ -60,7 +60,11 @@ MsgBox 請您把要查詢的書本條碼整理成bookList.txt`n放在此腳本的 bibliographicFiles
     Sleep 100
 
     ;寫入剪貼簿到檔案(館藏條碼)
-    FileAppend, "%clipboard%"`n, result.csv
+    FileAppend, "%clipboard%"`n, bibliographicFiles/result.csv
+
+    ;點存儲
+    ClickPosition(990, 990, 1, 0, "Screen", true)
+    Sleep 100
 
     ;點返回檢索
     ClickPosition(900, 990, 1, 0, "Screen", true)
@@ -72,6 +76,46 @@ MsgBox 請您把要查詢的書本條碼整理成bookList.txt`n放在此腳本的 bibliographicFiles
   MsgBox 腳本順利執行完成!
 
 return ;代表該區段腳本結束
+
+; 此function從 自動建議權威檔案.ahk 移植過來
+autoSuggetAuthFile(){
+  ;YesNo對話框 https://www.autohotkey.com/docs/v1/lib/MsgBox.htm
+  MsgBox, 4,, 此書是否為專業書籍?`n(點選是會自動填入f，反之歸為一般書籍g)
+  ;IfMsgBox執行多行指令 https://www.autohotkey.com/boards/viewtopic.php?t=74473
+  IfMsgBox Yes
+  classifyBookASprofessional()
+  else
+    classifyBookASgeneral()
+  Sleep, 100
+
+  ;點檢查權威的綠色勾勾
+  ClickPosition(290, 172, 1, 0, "Screen", true)
+  Sleep 600
+
+  While(!ClickPicture("images/finishedCheck.png", 1, 0,true,false))
+  {
+    ;點建議
+    ClickPosition(1842, 429, 1, 0, "Screen", true)
+    Sleep 600
+
+    ;點OK
+    ClickPosition(1054, 1001, 1, 0, "Screen", true)
+    Sleep 300
+
+    ;點下一頁
+    ClickPosition(1842, 211, 1, 0, "Screen", true)
+    Sleep 300
+  }
+
+  ;點完成檢驗的OK(有新增權威跳出的大框)
+  ClickPosition(1082, 669, 1, 0, "Screen", true)
+  Sleep 300
+
+  ;點完成檢驗的OK(小框)
+  ClickPosition(1082, 636, 1, 0, "Screen", true)
+  Sleep 300
+}
+; 此function從 自動建議權威檔案.ahk 移植過來
 
 ;按鍵Alt+G開始執行
 !G::
@@ -125,4 +169,34 @@ if %Return%{
   MouseMove, %posX_i%, %posY_i%,%Speed%
 }
 return
+}
+
+;獲取圖片的位置
+GetPicturePosition(ImageFilePath){
+  gui,add,picture,hwndmypic,%ImageFilePath%
+  controlgetpos,,,width,height,,ahk_id %mypic%
+  CoordMode Pixel
+  ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight,%ImageFilePath%
+  CoordMode Mouse
+  if %FoundX%{
+    return [FoundX+width/2,FoundY+height/2]
+  } else {
+    return FoundX
+  }
+}
+
+;模擬滑鼠點擊圖片
+ClickPicture(ImageFilePath,ClickCount:=1,Speed:=0,Return:=true,ShowError:=true){
+  pos:=GetPicturePosition(ImageFilePath)
+  if %pos%{
+    posX:=pos[1]
+    posY:=pos[2]
+    ClickPosition(posX,posY,ClickCount,Speed,,Return)
+    return [posX,posY]
+  }else{
+    if %ShowError% {
+      MSGBOX 畫面中找不到圖片`n %ImageFilePath%
+    }
+    return false
+  }
 }
