@@ -7,7 +7,7 @@ Target Program: SirsiDynix Symphony WorkFlows
 */
 
 MsgBox 歡迎使用簡易自動化腳本來協助您完成整批`n書目檔的查詢、建議權威的點擊與編輯步驟!
-MsgBox 請您把要查詢的書本條碼整理成bookList.txt`n放在此腳本的 bibliographicFiles 目錄之下`n`n接著您可以透過鍵盤組合建Alt+E開始執行`n`n在任何時候按下Esc來退出腳本
+MsgBox 請您把要查詢的書本條碼整理成bookList.txt`n放在此腳本的 bibliographicFiles 目錄之下`n`n接著您可以透過鍵盤組合建Alt+E開始執行`n`n在任何時候按下F12來暫停/繼續腳本`n`n在任何時候按下Esc來退出腳本
 
 ;按鍵Alt+E開始執行
 !E:: 
@@ -204,6 +204,13 @@ ClickPicture(ImageFilePath,ClickCount:=1,Speed:=0,Return:=true,ShowError:=true){
     return false
   }
 }
+
+;在任何時候按下F12來暫停腳本執行(可以恢復)
+f12::
+Pause
+Suspend
+return
+;https://www.autohotkey.com/board/topic/60321-how-to-toggle-script-onoff-with-a-key/
 
 ;在任何時候按下ESC來中斷腳本執行(直接退出)
 Esc::ExitApp
